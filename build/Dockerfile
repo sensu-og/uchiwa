@@ -20,3 +20,7 @@ RUN apk add --no-cache \
   gem install fpm -v "1.8.1" --no-ri --no-rdoc && \
   rm -rf /usr/lib/ruby/gems/*/cache/* && \
   rm -rf ~/.gem
+
+WORKDIR "/go/src/github.com/sensu/uchiwa"
+
+CMD ["./build/travis.sh"]

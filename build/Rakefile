@@ -82,12 +82,12 @@ task :package do
     run_command(fpm_cmd)
   end
 
-  puts "Signing the RPM package ..."
-  run_command("build/sign-rpm rpm --addsign *.rpm")
+  # puts "Signing the RPM package ..."
+  # run_command("build/sign-rpm rpm --addsign *.rpm")
 
-  puts "Moving packages to the package directory ..."
-  FileUtils.mv(Dir.glob("*.{deb,rpm}"), PKG_DIR)
-  run_command("ls -la #{PKG_DIR}/")
+  # puts "Moving packages to the package directory ..."
+  # FileUtils.mv(Dir.glob("*.{deb,rpm}"), PKG_DIR)
+  # run_command("ls -la #{PKG_DIR}/")
 
   puts "*****************************************************"
   puts "DING!"
@@ -160,4 +160,5 @@ task :organize do
   run_command("find #{S3_DIR} -type f -print")
 end
 
-task :default => [:install_deps, :build, :package, :organize]
+# task :default => [:install_deps, :build, :package, :organize]
+task :default => [:build, :package]
