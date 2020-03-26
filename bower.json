@@ -1,5 +1,6 @@
 {
   "name": "uchiwa",
   "dependencies": {
+    "uchiwa-web": "git://github.com/sensu-og/uchiwa-web"
   }
 }
