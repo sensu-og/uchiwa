@@ -1,6 +1,6 @@
+*.bak
 *.deb
 *.rpm
-build/
 *~
 .DS_Store
 .DS_Store?
